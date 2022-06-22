@@ -1,5 +1,6 @@
 import requests
 
+
 def buscar_pokemon(numero):
     """
     Busca um pokemon a partir do seu numero na pokedex.
@@ -10,6 +11,7 @@ def buscar_pokemon(numero):
     url = f'https://pokeapi.co/api/v2/pokemon/{numero}'
     resp = requests.get(url)
     return resp.json()['forms']
+
 
 if __name__ == '__main__':
     print(buscar_pokemon(1))
